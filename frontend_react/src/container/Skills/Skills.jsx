@@ -46,7 +46,13 @@ function Skills() {
             </motion.div>
           ))}
         </motion.div>
-
+          <motion.div className="app__skills-exp">
+              {experience.work.map((work) => (
+                <>
+                
+                </>
+              ))}
+          </motion.div>
       </div>
     </>
   )
