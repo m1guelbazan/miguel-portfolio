@@ -6,6 +6,9 @@ import { client } from '../../client';
 import './Footer.scss'
 
 const Footer = () => {
+  const [formData,setFormData] = useState({name: '', email: '', message: ''});
+  const [isFormSubmitted,setIsFormSubmitted] = useState(false);
+  const [loading,setLoading] = useState(false);
   return (
     <>
       <h2 className="head-text">Take a coffee and chat with me!</h2>
@@ -40,7 +43,7 @@ const Footer = () => {
             onChange={handleChangeInput}
           />
         </div>
-        <button type="button" className="p-text" onClick={handleSubmit}>Send</button>
+        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'} </button>
       </div>
     </>
   )
